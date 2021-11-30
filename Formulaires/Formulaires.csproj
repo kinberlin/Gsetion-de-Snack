@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\essaie_de_notifications\essaie_de_notifications.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="essaie_de_notifications">
+      <HintPath>..\essaie_de_notifications\bin\Debug\net5.0\essaie_de_notifications.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Add_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formulaires_Strip\Add_User.Designer.cs">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Add_User.resx">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Formulaires_Strip\Add_User.resx">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
